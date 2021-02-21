@@ -16,10 +16,10 @@ function App() {
       <div className="app">
         <div className="question">
             <h1 className="header">
-                <span>1</span>/4
+              <span>1</span>/4
             </h1>
             <div className="text">
-                일론 머스크의 우주 탐사 기업 이름은?
+              일론 머스크의 우주 탐사 기업 이름은?
             </div>
         </div>
         <div className="answer">
