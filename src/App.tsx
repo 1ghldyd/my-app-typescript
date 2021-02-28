@@ -43,6 +43,7 @@ const quizzes: Quizzes = [
   }
 ]
 
+
 function App() {
   const [currentNo, setCurrentNo] = useState<number>(0);
   const [showResult, setShowResult] = useState<boolean>(false);
