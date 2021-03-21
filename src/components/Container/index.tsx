@@ -12,7 +12,7 @@ const FlexBox = styled.div`
 `;
 
 const ContainerWrapper = styled.div`
-    width: 400px;
+    width: 500px;
     margin-top: 72px;
 `;
 
