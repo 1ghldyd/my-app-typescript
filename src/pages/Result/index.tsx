@@ -1,7 +1,4 @@
-import Container from "../Container";
-import ResultSection from "../ResultSection";
-import Button from "../Button";
-import { Link } from "react-router-dom";
+import { Container, ResultSection, Button } from "components";
 import { QUIZZES } from "../../constants";
 
 interface ResultProps {
@@ -15,9 +12,7 @@ const Result = ({ setScore, score }: ResultProps) => {
     return (
         <Container>
             <ResultSection convertedScore={convertedScore}></ResultSection>
-            <Link to="/">
-                <Button text="테스트 다시하기" onClick={ () => setScore(0) }></Button>
-            </Link>
+            <Button to="/" onClick={ () => setScore(0) }>테스트 다시하기</Button>
         </Container>
     )
 };

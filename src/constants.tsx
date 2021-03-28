@@ -1,4 +1,4 @@
-interface Quizzes {
+interface QuizzesType {
   id: number;
   question: string;
   answers: {
@@ -7,7 +7,7 @@ interface Quizzes {
   }[];
 };
 
-const QUIZZES: Quizzes[] = [
+const QUIZZES: QuizzesType[] = [
     {
       id: 1,
       question: "일론 머스크의 우주 탐사 기업 이름은?",
