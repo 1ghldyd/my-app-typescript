@@ -1,17 +1,20 @@
 import { Container, ResultSection, Button } from "components";
-import { QUIZZES } from "../../constants";
+import { useParams } from "react-router";
 
 interface ResultProps {
 	setScore: (value: number) => void;
-    score: number;
+    convertedScore: number;
+}
+interface cCodeProps {
+    cCode: string;
 }
 
-const Result = ({ setScore, score }: ResultProps) => {
-    const convertedScore = Math.floor((score / QUIZZES.length) * 100);
+const Result = ({ setScore, convertedScore }: ResultProps) => {
+    const { cCode }: cCodeProps = useParams();
     
     return (
         <Container>
-            <ResultSection convertedScore={convertedScore}></ResultSection>
+            <ResultSection cCode={ cCode }></ResultSection>
             <Button to="/" onClick={ () => setScore(0) }>테스트 다시하기</Button>
         </Container>
     )

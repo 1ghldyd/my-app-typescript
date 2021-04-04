@@ -4,9 +4,11 @@ import theme from "theme";
 import GlobalStyle from "globalStyle";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Quiz, Landing, Result, Loading } from "pages";
+import { QUIZZES } from "../constants";
 
 function App() {
   const [score, setScore] = useState<number>(0);
+  const convertedScore = Math.floor((score / QUIZZES.length) * 100);
 
   return (
     <ThemeProvider theme={theme}>
@@ -16,10 +18,10 @@ function App() {
           <Quiz setScore={ setScore }/>
         </Route>
         <Route path="/loading">
-          <Loading />
+          <Loading convertedScore={ convertedScore } />
         </Route>
-        <Route path="/result">
-          <Result setScore={ setScore } score={ score }/>
+        <Route path="/result/:cCode">
+          <Result setScore={ setScore } convertedScore={ convertedScore }/>
         </Route>
         <Route path="/" exact>
           <Landing />
